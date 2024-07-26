@@ -65,8 +65,8 @@ const int kDefaultMaxParticles = 500;
         _currentImageSource = nil;
 
         // Set modifier defaults to simulate particle in its original configuration.
-        _defaultAlphaModifier = std::make_shared<VROParticleModifier>(VROVector3f(1,0,0));
-        _defaultColorModifier = std::make_shared<VROParticleModifier>(VROVector3f(1,1,1));
+        _defaultAlphaModifier = std::make_shared<VROParticleModifier>(VROVector3f(1,1,1));
+        _defaultColorModifier = std::make_shared<VROParticleModifier>(VROVector3f(255,255,255));
         _defaultScaleModifier = std::make_shared<VROParticleModifier>(VROVector3f(1,1,1));
         _defaultRotationModifier = std::make_shared<VROParticleModifier>(VROVector3f(0,0,0));
         _defaultVelocityModifier = std::make_shared<VROParticleModifier>(VROVector3f(-0.5,1,0), VROVector3f(0.5,1,0));

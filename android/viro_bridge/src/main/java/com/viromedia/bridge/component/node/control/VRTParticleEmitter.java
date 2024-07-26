@@ -95,10 +95,10 @@ public class VRTParticleEmitter extends VRTControl {
 
     public VRTParticleEmitter(ReactContext reactContext) {
         super(reactContext);
-        mDefaultAlphaMod = new ParticleEmitter.ParticleModifierFloatArray(new float[]{1, 0, 0});
+        mDefaultAlphaMod = new ParticleEmitter.ParticleModifierFloatArray(new float[]{1, 1, 1});
         mDefaultScaleMode = new ParticleEmitter.ParticleModifierFloatArray(new float[]{1, 1, 1});
         mDefaultRotMod = new ParticleEmitter.ParticleModifierFloatArray(new float[]{0, 0, 0});
-        mDefaultColorMod = new ParticleEmitter.ParticleModifierFloatArray(new float[]{1, 1, 1});
+        mDefaultColorMod = new ParticleEmitter.ParticleModifierFloatArray(new float[]{300, 300, 300});
         mDefaultVelocity = new ParticleEmitter.ParticleModifierFloatArray(new float[]{-0.5f, 1, 0}, new float[]{0.5f, 1, 0});
         mDefaultAccelerationMod = new ParticleEmitter.ParticleModifierFloatArray(new float[]{0, 0, 0});
         mMainHandler = new Handler(Looper.getMainLooper());
@@ -161,7 +161,7 @@ public class VRTParticleEmitter extends VRTControl {
 
     public void setImage(ReadableMap image) {
         mImage = image;
-        mImageNeedsUpdate = true;
+        mImageNeedsUpdate = false;
     }
 
     public void setFixedToEmitter(boolean fixedToEmitter){
